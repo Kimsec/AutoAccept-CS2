@@ -20,6 +20,14 @@ When Continuous Mode is enabled, the tool will continuously search for the "Acce
 
 When Continuous Mode is disabled, the tool will search for the "Accept" button and click it. After clicking the button, it will wait for 45 seconds before stopping the search. This mode is useful for games where matches are less frequent or used on low-end machine, and you want to avoid unnecessary searches.
 
+### Start Minimized
+
+The program vil start minimized
+
+### Exit to tray
+
+Makes the X (close) button minimize to program to tray, if both "Start minimized" and "Exit to tray" it will start minimized to tray. 
+
 ## Installation
 1. Download the executable.
 2. Run the `.exe` file directly. No installation is required.
