@@ -43,6 +43,6 @@ When Continuous Mode is disabled, the tool will search for the "Accept" button a
 3. Click "Check for update" to check for the latest version.
 
 ## Screenshots
-![Main Window](screenshots/main_window.png)
-![Settings Window](screenshots/settings_window.png)
-![About Window](screenshots/about_window.png)
+![Main Window](Screenshots/main_window.png)
+![Settings Window](Screenshots/settings_window.png)
+![About Window](Screenshots/about_window.png)
