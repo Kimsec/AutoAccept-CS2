@@ -1,4 +1,4 @@
-# Auto Accept For Counter-Strike 2 (CS2)
+# Auto Accept For CS2 (Counter-Strike 2)
 
 ## Description
 The Auto Accept is a lightweight application designed to automatically accept matches with the mouse cursor. It features a user-friendly graphical interface and does not require installation, making it easy to use for anyone.
