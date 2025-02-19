@@ -1,7 +1,7 @@
 # Auto Accept For CS2
 
 ## Description
-The Auto Accept Tool is a lightweight application designed to automatically accept matches on the screen. It features a user-friendly graphical interface and does not require installation, making it easy to use for anyone.
+The Auto Accept is a lightweight application designed to automatically accept matches with the mouse cursor. It features a user-friendly graphical interface and does not require installation, making it easy to use for anyone.
 
 ## Features
 - Automatically detects and clicks the "Accept" button on the screen.
@@ -18,7 +18,7 @@ When Continuous Mode is enabled, the tool will continuously search for the "Acce
 
 ### Non-Continuous Mode
 
-When Continuous Mode is disabled, the tool will search for the "Accept" button and click it. After clicking the button, it will wait for 50 seconds before stopping the search. This mode is useful for games where matches are less frequent, and you want to avoid unnecessary searches.
+When Continuous Mode is disabled, the tool will search for the "Accept" button and click it. After clicking the button, it will wait for 45 seconds before stopping the search. This mode is useful for games where matches are less frequent or used on low-end machine, and you want to avoid unnecessary searches.
 
 ## Installation
 1. Download the executable.
@@ -28,7 +28,7 @@ When Continuous Mode is disabled, the tool will search for the "Accept" button a
 1. Launch the application.
 2. Adjust settings as needed through the "Settings" menu.
 3. The application start searching for "Accept" button on launch
-4. Click the "Start" button to begin searching for matches.
+4. Click the "Start" button to begin searching for matches if "Status: Not running".
 
 ### Settings
 
