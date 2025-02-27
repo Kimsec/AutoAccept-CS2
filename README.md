@@ -7,6 +7,14 @@
 <br><p align="center" width="100%">
 <a href="https://www.buymeacoffee.com/kimsec"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kimsec&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" /></a></p>
 
+<p align="center">
+  <a href="https://github.com/kimsec/AutoAccept-CS2/releases/latest/download/AutoAccept.exe">
+    <img src="https://img.shields.io/badge/Download-AutoAccept.exe-blue" alt="Download Badge" style="margin-right: 10px;"></a>
+    <img src="https://img.shields.io/github/v/release/kimsec/AutoAccept-CS2" alt="Release Badge" style="margin-right: 0px;">
+</p>
+
+
+
 ## Description
 
 The Auto Accept is a lightweight application designed to automatically accept matches in Counter-Strike 2 with the mouse cursor. It features a user-friendly graphical interface and __does not require installation__, making it easy to use for anyone.
