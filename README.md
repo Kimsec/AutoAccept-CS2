@@ -3,7 +3,7 @@
 ## Description
 The Auto Accept is a lightweight application designed to automatically accept matches with the mouse cursor. It features a user-friendly graphical interface and **does not require installation**, making it easy to use for anyone.
 
-## Features
+## FAQ
 - Automatically detects and clicks the "Accept" button on the screen.
 - Supports multiple screen resolutions: 960p, 1080p, 1440p (Other resolutions may work, but not tested)
 - Supports both 4:3 and 16:9 screen formats.
