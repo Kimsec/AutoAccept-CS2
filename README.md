@@ -1,5 +1,5 @@
 <p align="center" width="10%">
-    <img width="20%" src="Screenshots/logo.png">
+    <a href="https://github.com/kimsec/AutoAccept-CS2/releases/latest/download/AutoAccept.exe"><img width="20%" src="Screenshots/logo.png"></a>
 </p>
 
 # <p align="center">Auto Accept For CS2</p>
@@ -10,7 +10,8 @@
 <p align="center">
   <a href="https://github.com/kimsec/AutoAccept-CS2/releases/latest/download/AutoAccept.exe">
     <img src="https://img.shields.io/badge/Download-AutoAccept.exe-blue" alt="Download Badge" style="margin-right: 10px;"></a>
-    <img src="https://img.shields.io/github/v/release/kimsec/AutoAccept-CS2" alt="Release Badge" style="margin-right: 0px;">
+    <a href="https://github.com/Kimsec/AutoAccept-CS2/releases">
+    <img src="https://img.shields.io/github/v/release/kimsec/AutoAccept-CS2" alt="Release Badge" style="margin-right: 0px;"></a>
 </p>
 
 
