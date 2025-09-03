@@ -29,6 +29,10 @@ The Auto Accept is a lightweight application designed to automatically accept ma
 - Settings window to configure for your neeeds.
 - About window with version information and update check.
 
+  ## Screenshots
+![Main Window](Screenshots/main_window.png)
+![Settings Window](Screenshots/settings_window.png)
+![About Window](Screenshots/about_window.png)
 
 ## FAQ
 ### Continuous Mode
@@ -70,8 +74,3 @@ Makes the X (close) button minimize the program to tray, if both "Start minimize
 1. Click the "About" label to open the about window.
 2. View the author, version, supported resolutions, and formats.
 3. Click "Check for update" to check for the latest version.
-
-## Screenshots
-![Main Window](Screenshots/main_window.png)
-![Settings Window](Screenshots/settings_window.png)
-![About Window](Screenshots/about_window.png)
