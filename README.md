@@ -3,6 +3,7 @@
 </p>
 
 # <p align="center">Auto Accept For CS2</p>
+### <p align="center" style="font-weight: bold;">✅ STILL WORKING IN 2026!</p>
 
 <br><p align="center" width="100%">
 <a href="https://www.buymeacoffee.com/kimsec">
