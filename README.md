@@ -3,7 +3,6 @@
 </p>
 
 # <p align="center">Auto Accept For CS2</p>
-### <p align="center" style="font-weight: bold;">✅ STILL WORKING IN 2026!</p>
 
 <br><p align="center" width="100%">
 <a href="https://www.buymeacoffee.com/kimsec">
@@ -26,7 +25,9 @@ The Auto Accept is a lightweight application designed to automatically accept ma
 - Automatically detects and clicks the "Accept" button on the screen.
 - Supports multiple screen resolutions: 960p, 1080p, 1440p (Other resolutions may work, but not tested)
 - Supports both 4:3 and 16:9 screen formats.
-- Continuous mode for ongoing detection and acceptance.
+- Pauses searching while you're in a match (via CS2 Game State Integration) and resumes in the menu.
+- Idles when CS2 isn't running — only searches while the game is open (saves CPU).
+- Optional "Start with Windows" autostart, and remembers its window position.
 - Settings window to configure for your neeeds.
 - About window with version information and update check.
 
@@ -36,13 +37,11 @@ The Auto Accept is a lightweight application designed to automatically accept ma
 ![About Window](Screenshots/about_window.png)
 
 ## FAQ
-### Continuous Mode
+### Pause search in match
+Uses CS2's Game State Integration (GSI) to detect when you're in a match. While in a match, the accept-button search is paused and resumes when you're back in the menu.
 
-When Continuous Mode is enabled, the tool will continuously search for the "Accept" button and click it whenever it appears. This mode is useful for games where matches are frequently found.
-
-### Non-Continuous Mode
-
-When Continuous Mode is disabled, the tool will search for the "Accept" button and click it. After clicking the button, it will wait for 60 seconds before stopping the search. This mode is useful for games where matches are less frequent or used on low-end machine, and you want to avoid unnecessary searches.
+### Start with Windows
+When enabled, the app launches automatically when you log in to Windows.
 
 ### Start Minimized
 
@@ -59,13 +58,13 @@ Makes the X (close) button minimize the program to tray, if both "Start minimize
 ## Usage
 1. Launch the application.
 2. Adjust settings as needed through the "Settings" menu.
-3. The application start searching for "Accept" button on launch
-4. Click the "Start" button to begin searching for Accept button if "Status: Not running". (when not Continuous mode)
+3. The application starts searching for the "Accept" button on game launch.
+4. Use the "Start" / "Stop" button to toggle searching on or off.
 
 ### Settings
 
-1. Click the "Settings" button to open the settings window.
-2. Enable or disable Continuous Mode using the checkbox.
+1. Enable or disable "Pause search in match".
+2. Enable or disable "Start with Windows".
 3. Enable or disable Start minimized
 4. Enable or disable Exit to Tray
 5. Click "Save" to save the settings.
