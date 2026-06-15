@@ -264,9 +264,7 @@ class AutoAcceptApp:
     def is_in_match(self):
         if self.gsi_active():
             state = self._gsi_state or {}
-            activity = state.get("player", {}).get("activity")
-            map_obj = state.get("map")
-            self._last_in_match = (activity == "playing" and bool(map_obj))
+            self._last_in_match = bool(state.get("map"))
             return self._last_in_match
         return self._last_in_match
 
