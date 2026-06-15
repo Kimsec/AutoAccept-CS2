@@ -1,0 +1,6 @@
+# Runtime dependencies for AutoAccept-CS2 (Python 3.10+)
+pyautogui
+requests
+pystray
+pillow
+opencv-python
