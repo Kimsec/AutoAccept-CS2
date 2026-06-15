@@ -224,8 +224,6 @@ class AutoAcceptApp:
         return self._gsi_state is not None and (time.time() - self._gsi_time) <= self.GSI_STALE_SECONDS
 
     def cs2_running(self):
-        if self.gsi_active():
-            return True
         if not sys.platform.startswith("win"):
             return True
         try:
@@ -345,12 +343,13 @@ class AutoAcceptApp:
         buttons_dir = resource_path(os.path.join('assets', 'buttons'))
         button_images = sorted(glob.glob(os.path.join(buttons_dir, '*.png')))
         if not button_images:
-            print(f"Advarsel: ingen knapp-bilder funnet i {buttons_dir}")
+            print(f"Warning: No button images found in {buttons_dir}")
 
         while self.running.is_set():
             cs2 = self.cs2_running()
             if not cs2:
                 self._last_in_match = False
+                self._gsi_state = None
             in_match = self.pause_in_match_var.get() and self.is_in_match()
             self.root.after(0, lambda im=in_match, c=cs2: self._update_status(im, c))
 
@@ -657,7 +656,7 @@ class AutoAcceptApp:
             self.icon_image = tk.PhotoImage(file=self.ICON_FILE)
             self.root.iconphoto(False, self.icon_image)
         else:
-            print(f"Ikonfil ikke funnet: {self.ICON_FILE}")
+            print(f"Icon not found: {self.ICON_FILE}")
 
         if self.win_x is not None and self.win_y is not None:
             self.root.geometry(f"+{self.win_x}+{self.win_y}")
