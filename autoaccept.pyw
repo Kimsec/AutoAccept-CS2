@@ -348,8 +348,10 @@ class AutoAcceptApp:
             print(f"Advarsel: ingen knapp-bilder funnet i {buttons_dir}")
 
         while self.running.is_set():
-            in_match = self.pause_in_match_var.get() and self.is_in_match()
             cs2 = self.cs2_running()
+            if not cs2:
+                self._last_in_match = False
+            in_match = self.pause_in_match_var.get() and self.is_in_match()
             self.root.after(0, lambda im=in_match, c=cs2: self._update_status(im, c))
 
             if not cs2 or in_match:
