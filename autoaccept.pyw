@@ -24,7 +24,7 @@ TOOLTIP_FG = "#cccccc"    # Tooltip text
 # Statusfarger
 ST_WAIT    = "#C7C7D6"    # Waiting for match
 ST_ACCEPT  = "#3FB950"    # Match Accepted
-ST_PAUSE   = "#E3B341"    # In match - paused
+ST_PAUSE   = "#E3B341"    # Paused (in match)
 ST_IDLE    = "#8A8A99"    # CS2 not launched
 ST_STOP    = "#F85149"    # Stopped
 
@@ -272,7 +272,7 @@ class AutoAcceptApp:
         if not cs2_running:
             text, color = "CS2 not launched", ST_IDLE
         elif in_match:
-            text, color = "In match - paused", ST_PAUSE
+            text, color = "Paused (in match)", ST_PAUSE
         elif self._last_accept_time is not None and (time.time() - self._last_accept_time) < self.ACCEPT_LABEL_SECONDS:
             text, color = "Match Accepted", ST_ACCEPT
         else:
@@ -335,6 +335,12 @@ class AutoAcceptApp:
                     pass
             with open(cfg_path, "w", encoding="utf-8") as f:
                 f.write(self.GSI_CFG_TEMPLATE)
+            if self.cs2_running():
+                self.root.after(0, lambda: messagebox.showinfo(
+                    "AutoAccept - first-time setup",
+                    "AutoAccept just installed its CS2 integration.\n\n"
+                    "Since CS2 is already running, restart it once so match detection and the "
+                    "in-match pause start working. This is done only once."))
         except Exception as e:
             print(f"GSI config not installed: {e}")
 
@@ -384,7 +390,7 @@ class AutoAcceptApp:
         self.start_button.config(state=tk.DISABLED)
         if not self.running.is_set():
             self.running.set()
-            self.status_label.config(text="Waiting for match", fg=ST_WAIT, font=(FONT, 12, "bold"))
+            self._update_status(self.pause_in_match_var.get() and self.is_in_match(), self.cs2_running())
             self.start_button.config(text="Stop", command=self.stop_search)
             threading.Thread(target=self.search_accept_button, daemon=True).start()
         else:
@@ -662,7 +668,10 @@ class AutoAcceptApp:
             self.root.geometry(f"+{self.win_x}+{self.win_y}")
         else:
             self.root.eval('tk::PlaceWindow . center')
-        self.status_label = tk.Label(self.root, text="Stopped", fg=ST_STOP, bg=BG, font=(FONT, 12, "bold"), name="status_label")
+        init_cs2 = self.cs2_running()
+        init_text, init_color = ("Waiting for match", ST_WAIT) if init_cs2 else ("CS2 not launched", ST_IDLE)
+        self.status_label = tk.Label(self.root, text=init_text, fg=init_color, bg=BG,
+                                     font=(FONT, 12, "bold"), name="status_label")
         self.status_label.pack(pady=20)
 
         self.start_minimized_var = tk.BooleanVar(value=self.start_minimized_val)
